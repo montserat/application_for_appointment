@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="stylesheet.css"> 
+    <title>Заявление на назначение и выплаты единовременного пособия</title>
+    <script>
+        function thisFileUpload() {
+            document.getElementById("files-button").click();
+        };
+    </script>
+   
+</head>
+
+<body>
+    <header>
+        <h3 class="title">
+            Заявление на назначение и выплаты единовременного пособия
+        </h3>
+    </header>
+    <div class="container">
+        <form action="" method="POST">
+            <fieldset>
+                <legend>Заявитель - физическое лицо</legend>
+                <div class="row">
+                    <label class="required" for="surname">Фамилия</label>
+                    <input required id="surname" type="text" name="surname" />
+                </div>
+                <div class="row">
+                    <label class="required" for="name">Имя</label>
+                    <input required id="name" type="text" name="name" />
+                </div>
+                <div class="row">
+                    <label for="middle-name">Отчество</label>
+                    <input id="middle-name" type="text" name="middle-name" />
+                </div>
+                <div class="row">
+                    <label class="required" for="status">Статус</label>
+                    <select required id="status" name="status">
+                        <option hidden value="" selected></option>
+                        <option value="Усыновитель">Усыновитель</option>
+                        <option value="Приемный родитель">Приемный родитель</option>
+                        <option value="Опекун (попечитель)">Опекун (попечитель)</option>
+                    </select>
+                </div>
+                <fieldset class="spaced-fieldset">
+                    <legend>Адрес регистрации</legend>
+                    <div class="row">
+                        <label class="required" for="registration-region">Регион</label>
+                        <input required placeholder="Еврейская автономная область" id="registration-region" type="text"
+                            name="registration-region" />
+                    </div>
+                    <div class="row">
+                        <label class="required" for="registration-district">Район</label>
+                        <input required placeholder="Если района нет, то поставить прочерк" id="registration-district"
+                            type="text" name="registration-district" />
+                    </div>
+                    <div class="row">
+                        <label for="registration-city">Город</label>
+                        <input id="registration-city" type="text" name="registration-city" />
+                    </div>
+                    <div class="row">
+                        <label for="registration-area">Населенный пункт</label>
+                        <input id="registration-area" type="text" name="registration-area" />
+                    </div>
+                    <div class="row">
+                        <label class="required" for="registration-street">Улица</label>
+                        <input required id="registration-street" type="text" name="registration-street" />
+                    </div>
+                    <div class="row number-row">
+                        <label for="registration-index">Индекс</label>
+                        <input id="registration-index" type="number" name="registration-index" />
+                    </div>
+                    <div class="row number-row">
+                        <label class="required" for="registration-house-number">Дом</label>
+                        <input required id="registration-house-number" type="number" name="registration-house-number" />
+                    </div>
+                    <div class="row number-row">
+                        <label for="registration-housing">Корпус</label>
+                        <input id="registration-housing" type="number" name="registration-housing" />
+                    </div>
+                    <div class="row number-row">
+                        <label for="registration-appartment">Квартира</label>
+                        <input id="registration-appartment" type="number" name="registration-appartment" />
+                    </div>
+                </fieldset>
+                <fieldset class="spaced-fieldset">
+                    <legend>Адрес проживания</legend>
+                    <div class="row">
+                        <label class="required" for="living-region">Регион</label>
+                        <input required placeholder="Еврейская автономная область" id="living-region" type="text"
+                            name="living-region" />
+                    </div>
+                    <div class="row">
+                        <label class="required" for="living-district">Район</label>
+                        <input required placeholder="Если района нет, то поставить прочерк" id="living-district"
+                            type="text" name="living-district" />
+                    </div>
+                    <div class="row">
+                        <label for="living-city">Город</label>
+                        <input id="living-city" type="text" name="living-city" />
+                    </div>
+                    <div class="row">
+                        <label for="living-area">Населенный пункт</label>
+                        <input id="living-area" type="text" name="living-area" />
+                    </div>
+                    <div class="row">
+                        <label class="required" for="living-street">Улица</label>
+                        <input required id="living-street" type="text" name="living-street" />
+                    </div>
+                    <div class="row number-row">
+                        <label for="living-index">Индекс</label>
+                        <input id="living-index" type="number" name="living-index" />
+                    </div>
+                    <div class="row number-row">
+                        <label class="required" for="living-house-number">Дом</label>
+                        <input required id="living-house-number" type="number" name="living-house-number" />
+                    </div>
+                    <div class="row number-row">
+                        <label for="living-housing">Корпус</label>
+                        <input id="living-housing" type="number" name="living-housing" />
+                    </div>
+                    <div class="row number-row">
+                        <label for="living-appartment">Квартира</label>
+                        <input id="living-appartment" type="number" name="living-appartment" />
+                    </div>
+                </fieldset>
+                <fieldset class="spaced-fieldset">
+                    <legend>
+                        Данные основного документа, удостоверяющего личность
+                    </legend>
+                    <div class="row">
+                        <label class="required" for="passport-type">Тип документа</label>
+                        <select required id="passport-type" name="passport-type">
+                            <option hidden disabled selected></option>
+                            <option value="Паспорт РФ">Паспорт РФ</option>
+                            <option value="Заграннпаспорт РФ">Заграннпаспорт РФ</option>
+                        </select>
+                    </div>
+                    <div class="row number-row">
+                        <label for="passport-series">Серия</label>
+                        <input id="passport-series" type="number" name="passport-series" />
+                    </div>
+                    <div class="row number-row">
+                        <label class="required" for="passport-number">Номер</label>
+                        <input required id="passport-number" type="number" name="passport-number" />
+                    </div>
+                    <div class="row number-row">
+                        <label class="required" for="passport-issue-date">Дата выдачи</label>
+                        <input required id="passport-issue-date" type="text" name="passport-issue-date" />
+                    </div>
+                    <div class="row ">
+                        <label class="required" for="passport-issued-by">Кем выдан</label>
+                        <textarea required id="passport-issued-by" name="passport-issued-by" rows="2"></textarea>
+                    </div>
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>Заявление</legend>
+                <span class="formatted-text">Прошу назначить и выплатить мне единовременное пособие при передаче
+                    ребенка на воспитание в семью</span>
+
+                <div class="row radio-row">
+                    <label>Форма устройства</label>
+                    <ul>
+                        <li>
+                            <input id="form-of-placement-1" type="radio" name="form-of-placement"
+                                value="на усыновление" />
+                            <label class="radio-label" for="form-of-placement-1">на усыновление</label>
+                        </li>
+
+                        <li>
+                            <input id="form-of-placement-2" type="radio" name="form-of-placement"
+                                value="в приемную семью" />
+                            <label class="radio-label" for="form-of-placement-2">в приемную семью</label>
+                        </li>
+                        <li>
+                            <input id="form-of-placement-3" type="radio" name="form-of-placement"
+                                value="под опеку (попечительство)" />
+                            <label class="radio-label" for="form-of-placement-3">под опеку (попечительство)</label>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="row number-row">
+                    <label class="required" for="placement-date">Дата устройства</label>
+                    <input required id="placement-date" type="text" name="placement-date" />
+                </div>
+                <fieldset>
+                    <legend>Сведения о ребенке</legend>
+                    <div class="row">
+                        <label class="required" for="child-surname">Фамилия</label>
+                        <input required id="child-surname" type="text" name="child-surname" />
+                    </div>
+                    <div class="row">
+                        <label class="required" for="child-name">Имя</label>
+                        <input required id="child-name" type="text" name="child-name" />
+                    </div>
+                    <div class="row">
+                        <label for="child-middle-name">Отчество</label>
+                        <input id="child-middle-name" type="text" name="child-middle-name" />
+                    </div>
+                    <div class="row number-row">
+                        <label class="required" for="child-date-of-birth">Дата рождения</label>
+                        <input required id="child-date-of-birth" type="text" name="child-date-of-birth" />
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Сведения о родителях</legend>
+                    <fieldset>
+                        <legend>Сведения о матери ребенка</legend>
+                        <div class="row">
+                            <label class="required" for="mother-surname">Фамилия</label>
+                            <input required id="mother-surname" type="text" name="mother-surname" />
+                        </div>
+                        <div class="row">
+                            <label class="required" for="mother-name">Имя</label>
+                            <input required id="mother-name" type="text" name="mother-name" />
+                        </div>
+                        <div class="row">
+                            <label for="mother-middle-name">Отчество</label>
+                            <input id="mother-middle-name" type="text" name="mother-middle-name" />
+                        </div>
+                        <div class="row number-row">
+                            <label class="required" for="mother-date-of-birth">Дата рождения</label>
+                            <input required id="mother-date-of-birth" type="text" name="mother-date-of-birth" />
+                        </div>
+                        <div class="row">
+                            <label class="required" for="mother-snils">СНИЛС</label>
+                            <input required id="mother-snils" type="text" name="mother-snils" />
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Сведения об отце ребенка</legend>
+                        <div class="row">
+                            <label class="required" for="father-surname">Фамилия</label>
+                            <input required id="father-surname" type="text" name="father-surname" />
+                        </div>
+                        <div class="row">
+                            <label class="required" for="father-name">Имя</label>
+                            <input required id="father-name" type="text" name="father-name" />
+                        </div>
+                        <div class="row">
+                            <label for="father-middle-name">Отчество</label>
+                            <input id="father-middle-name" type="text" name="father-middle-name" />
+                        </div>
+                        <div class="row number-row">
+                            <label class="required" for="father-date-of-birth">Дата рождения</label>
+                            <input required id="father-date-of-birth" type="text" name="father-date-of-birth" />
+                        </div>
+                        <div class="row">
+                            <label class="required" for="father-snils">СНИЛС</label>
+                            <input required id="father-snils" type="text" name="father-snils" />
+                        </div>
+                    </fieldset>
+                    <div class="parents-arest-choice">
+                        <ul>
+                            <li>
+                                <input id="parents-arrest-1" type="radio" name="parents-arrest"
+                                    value="родители ребенка находятся под стражей или отбывают наказание в виде лишения свободы" />
+                                <label class="radio-label" for="parents-arrest-1">родители ребенка находятся под стражей
+                                    или отбывают наказание в виде лишения свободы</label>
+                            </li>
+
+                            <li>
+                                <input id="parents-arrest-2" type="radio" name="parents-arrest"
+                                    value="родители ребенка не находятся под стражей или отбывают наказание в виде лишения свободы" />
+                                <label class="radio-label" for="parents-arrest-2">родители ребенка не находятся под
+                                    стражей или отбывают наказание в виде лишения свободы</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <fieldset>
+                        <div class="row long-label-row">
+                            <label class="required" for="arrest-region-code">Код региона, в котором находится
+                                учереждение отбывания наказания</label>
+                            <input required id="arrest-region-code" type="text" name="arrest-region-code" />
+                        </div>
+                        <div class="row long-label-row">
+                            <label class="required" for="arrest-facility-name">Наименование учереждения отбывания
+                                наказания</label>
+                            <input required id="arrest-facility-name" type="text" name="arrest-facility-name" />
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <span class="formatted-text">Единовременное пособие прошу перечислить на личный счет,
+                    открытый на мое имя в кредитной организации, расположенной на территории Российской Федерации
+                </span>
+                <fieldset>
+                    <legend>Банковские реквизиты</legend>
+                    <div class="row">
+                        <label class="required" for="bank-name">Наименование банка</label>
+                        <textarea required id="bank-name" name="bank-name" rows="2"></textarea>
+                    </div>
+                    <div class="row">
+                        <label class="required" for="bik">БИК</label>
+                        <input required id="bik" type="number" name="bik" />
+                    </div>
+                    <div class="row">
+                        <label class="required" for="inn">ИНН</label>
+                        <input required id="inn" type="number" name="inn" />
+                    </div>
+                    <div class="row">
+                        <label class="required" for="kpp">КПП</label>
+                        <input required id="kpp" type="number" name="kpp" />
+                    </div>
+                    <div class="row">
+                        <label class="required" for="rs">Р/C</label>
+                        <input required id="rs" type="number" name="rs" />
+                    </div>
+                </fieldset>
+            </fieldset>
+            <fieldset class="spaced-fieldset">
+                <legend>Прилагаемые документы</legend>
+                <div class="row button-row">
+                    <label>Вступившее в законную силу решение суда об
+                        усыновлении либо выписка из решения органа опеки
+                        и попечительства об установлении над ребенком опеки (попечительства),
+                        в том числе по договору о приемной семье</label>
+                    <span class="button-asterisk">*</span>
+                    <button type="button" id="upload-button" name="upload-button" value="Upload"
+                        onclick="thisFileUpload();">Прикрепить</button>
+                    <input style="display: none;" type="file" id="files-button" name="files-button"></button>
+                </div>
+            </fieldset>
+            <button class="submit-button" type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+
+
+</html>

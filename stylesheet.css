@@ -1,0 +1,168 @@
+* {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+body {
+    background-color: #efebde;
+    padding: 0 10%;
+}
+
+.title {
+    color: #385e82;
+    font-size: 15pt;
+    text-align: center;
+}
+
+fieldset {
+    border-radius: 1%;
+}
+
+fieldset>fieldset>.row {
+    margin: 2px -12px;
+}
+
+fieldset>fieldset>fieldset>.row {
+    margin: 2px -24px;
+}
+
+legend {
+    color: #0047d5;
+    font-style: italic;
+    font-size: 12pt;
+}
+
+.required::after {
+    content: "\002A";
+    color: red;
+}
+
+.row {
+    display: flex;
+    padding: 1px 11% 0 10%;
+    margin: 0 0 2px 0;
+    align-items: center;
+    align-content: flex-start;
+}
+
+label {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.row label {
+    flex-basis: 25%;
+    text-align: right;
+    padding-right: 2%;
+}
+
+.row li label {
+    padding-right: 0%;
+}
+
+.row input,
+select,
+textarea {
+    flex-basis: 100%;
+}
+
+textarea {
+    overflow-y: scroll;
+}
+
+.spaced-fieldset {
+    margin-top: 4%;
+}
+
+.number-row {
+    padding: 1px 0.5em 0 0;
+}
+
+.number-row input {
+    flex-basis: 0%;
+}
+
+.radio-row {
+    margin-right: 20%;
+}
+
+.radio-row label {
+    margin-left: 5px;
+}
+
+.parents-arest-choice {
+    margin-left: 26%;
+}
+
+.long-label-row {
+    padding: 0 11% 0 2%;
+}
+
+.long-label-row label {
+    flex-basis: 40%;
+}
+
+.long-label-row input {
+    flex-basis: 60%;
+}
+
+.button-row {
+    padding: 1px 3% 0 3%;
+}
+
+.button-row label {
+    font-size: 90%;
+    font-weight: normal;
+    flex-basis: 100%;
+    text-align: left;
+}
+
+.button-row input {
+    align-self: center;
+    width: fit-content;
+
+}
+
+.button-asterisk {
+    color: red;
+    align-self: center;
+}
+
+.submit-button {
+    margin: 2em 2em 1em 0;
+    float: right;
+    width: 10%;
+}
+
+.formatted-text {
+    display: inline-block;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: left;
+    padding: 1% 7% 0 10%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+}
