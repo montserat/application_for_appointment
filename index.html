@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="stylesheet.css"> 
+    
     <title>Заявление на назначение и выплаты единовременного пособия</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="conditional-rendering.js"></script>
+    
     <script>
         function thisFileUpload() {
             document.getElementById("files-button").click();
@@ -135,7 +139,7 @@
                         <select required id="passport-type" name="passport-type">
                             <option hidden disabled selected></option>
                             <option value="Паспорт РФ">Паспорт РФ</option>
-                            <option value="Заграннпаспорт РФ">Заграннпаспорт РФ</option>
+                            <option value="Загранпаспорт РФ">Загранпаспорт РФ</option>
                         </select>
                     </div>
                     <div class="row number-row">
@@ -330,6 +334,4 @@
         </form>
     </div>
 </body>
-
-
 </html>
